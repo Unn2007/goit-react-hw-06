@@ -18,11 +18,10 @@ const FeedbackSchema = Yup.object().shape({
 });
 
 function ContactForm() {
-  
   const dispatch = useDispatch();
   const handleSubmit = (values, actions) => {
     dispatch(addContact(values.username, values.telNumber));
-   
+
     actions.resetForm();
   };
   const usernameFieldId = useId();
@@ -62,4 +61,3 @@ function ContactForm() {
 }
 
 export default ContactForm;
-
